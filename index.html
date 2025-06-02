@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간표 작성 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="time-schedule-container" id="capture">
+            <textarea class="time-schedule-header" name="" id="" placeholder="시간표 이름을 입력하세요" rows="1"></textarea>
+            <div class="left-side-container">
+                <table class="time-schedule">
+                    <tr>
+                        <th class="time"></th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                        <th>일</th>
+                    </tr>
+                    <tr>
+                        <td class="time">1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">6</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">8</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="credit-container">
+                <div class="credit-item">
+                    <div class="credit-item-credit"><span id="credit-sum">0</span>학점</div>
+                </div>
+            </div>
+            <div class="date-container">
+                <span id="date"></span>
+            </div>
+        </div>
+        <div class="right-side-container">
+            <div class="class-lists-container">
+                <div class="class-list">
+                    <div class="class-list-item class0" data-day="1" data-starttime="2" data-endtime="3"
+                        data-color="#CD5C5C" data-name="시민교육론" data-credit="2">
+                        <div class="class-list-item-name">시민교육론</div>
+                        <div class="class-list-item-detail">월요일
+                            2-3교시</div>
+                    </div>
+                    <div class="class-list-item class1" data-day="1" data-starttime="3" data-endtime="5"
+                        data-color="#F08080" data-name="HCI 이론" data-credit="3">
+                        <div class="class-list-item-name">HCI 이론</div>
+                        <div class="class-list-item-detail">월요일
+                            3-5교시</div>
+                    </div>
+                    <div class="class-list-item class2" data-day="2" data-starttime="6" data-endtime="7"
+                        data-color="#FA8072" data-name="게임의 이해" data-credit="2">
+                        <div class="class-list-item-name">게임의 이해</div>
+                        <div class="class-list-item-detail">화요일
+                            6-7교시</div>
+                    </div>
+                    <div class="class-list-item class3" data-day="3" data-starttime="2" data-endtime="4"
+                        data-color="#E9967A" data-name="체력단련" data-credit="3">
+                        <div class="class-list-item-name">체력단련</div>
+                        <div class="class-list-item-detail">수요일
+                            2-4교시</div>
+                    </div>
+                    <div class="class-list-item class4" data-day="4" data-starttime="2" data-endtime="3"
+                        data-color="#FFA07A" data-name="미학과 예술론" data-credit="2">
+                        <div class="class-list-item-name">미학과 예술론</div>
+                        <div class="class-list-item-detail">목요일
+                            2-3교시</div>
+                    </div>
+                    <div class="class-list-item class5" data-day="5" data-starttime="2" data-endtime="3"
+                        data-color="#EEC2BD" data-name="초급 중국어" data-credit="2">
+                        <div class="class-list-item-name">초급 중국어</div>
+                        <div class="class-list-item-detail">금요일
+                            2-3교시</div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="menu-container">
+                <button id="addclass">수업 추가</button>
+                <button id="deleteclass">수업 삭제</button>
+                <button id="reset">초기화</button>
+                <button id="capture-button">캡쳐</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
